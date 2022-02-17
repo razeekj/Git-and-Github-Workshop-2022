@@ -2,9 +2,7 @@
 <html>
   <body>
     {% for page in site.pages %}
-        {% if page.tags[0] == "khacks" %}
-            <p>{{page.title}}</p>
-        {% endif %}
+        <p>{{page.title}}</p>
     {% endfor %}
   </body>
 </html>
