@@ -1,4 +1,8 @@
 <!DOCTYPE html>
 <html>
-  {{ content }}
+  {% for page in site.pages %}
+      {% if page.tags[0] == "khacks" %}
+          <p>{{page.title}}</p>
+      {% endif %}
+  {% endfor %}
 </html>
