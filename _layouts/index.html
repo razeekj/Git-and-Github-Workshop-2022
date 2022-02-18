@@ -1,8 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    {% for page in site.pages %}
-        <p>{{page.title}}</p>
-    {% endfor %}
-  </body>
-</html>
+<title>Congrats🎉</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.6.1/randomColor.min.js"></script>
+<style>
+	body
+    {
+    	
+    }
+	.bgimg
+    {
+        color: black;
+    }
+</style>
+<body>
+
+<div class="w3-container">
+<h2> You Just Made your First Pull Request 😎🥳</h2>
+</div>
+
+<div class="w3-row w3-padding">
+ {% for page in site.pages %}
+    <div class="w3-card-4 w3-center w3-quarter bgimg " style="overflow:hidden;">
+	     <h3>{{page.name}}</h3>
+    </div>
+ {% endfor %}
+</div>
+
+
+</div>
+
+<script>
+let elements = document.getElementsByClassName("w3-card-4");
+for(let i = 0; i < elements.length; i++)
+{
+	let bgcolor = randomColor();
+	elements[i].style.backgroundColor = bgcolor;
+    elements[i].style.color = (parseInt(bgcolor.replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';
+}
+
+</script>
+
+</body>
+</html>       
